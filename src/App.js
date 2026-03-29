@@ -28,24 +28,12 @@ function App() {
       <div>
         <Navbar />
         <main>
-          <section id="home">
-              <Home />
-          </section>
-          <section id="about">
-              <About />
-          </section>
-          <section id="skills">
-              <Skills />
-          </section>
-          <section id="projects">
-              <Projects />
-          </section>
-          <section id="certifications">
-              <Certifications />
-          </section>
-          <section id="contact">
-              <Contact />
-          </section>
+          <section id="home"><Home /></section>
+          <section id="about"><About /></section>
+          <section id="skills"><Skills /></section>
+          <section id="projects"><Projects /></section>
+          <section id="certifications"><Certifications /></section>
+          <section id="contact"><Contact /></section>
         </main>
       </div>
       <Modal open={modalOpen} onClose={closeModal} title={modalTitle}>
@@ -56,3 +44,4 @@ function App() {
 }
 
 export default App;
+

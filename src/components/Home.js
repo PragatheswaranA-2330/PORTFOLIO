@@ -1,10 +1,7 @@
 // src/components/Home.js
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ModalContext } from "../App";
-import Contact from "./Contact";
 import Projects from "./Projects";
-
-const { useEffect } = React;
 
 function useModal() {
   const ctx = useContext(ModalContext);
@@ -13,49 +10,70 @@ function useModal() {
 
 const Home = () => {
   const { showModal } = useModal();
+  const [photoOpen, setPhotoOpen] = useState(false);
 
   return (
-    <div className="home-container">
-      <div className="home-bg" />
+    <div className="home-container" id="home">
+      <div className="home-bg">
+        <div className="orb orb-1"></div>
+        <div className="orb orb-2"></div>
+        <div className="orb orb-3"></div>
+      </div>
+
       <div className="home-content">
-        <h1>Web Developer & MERN Enthusiast</h1>
+        <span className="hero-subtitle">Web Developer &amp; MERN Enthusiast</span>
+
         <div className="photo-wrap">
-          <img src="/unnamed.jpg" alt="PRAGATHESWARAN " className="hero-photo" />
+          <img
+            src="/ms.jpeg"
+            alt="PRAGATHESWARAN A"
+            className="hero-photo"
+            onClick={() => setPhotoOpen(true)}
+            title="Click to view full size"
+          />
         </div>
-        <h2 className="hero-title">Hi, I AM PRAGATHESWARAN A</h2>
-        <p>
+
+        <h1 className="hero-title">Hi, I AM PRAGATHESWARAN A</h1>
+
+        <p className="hero-desc">
           Enthusiastic software developer with a strong foundation in web
           development, Python, and C, passionate about building modern,
           efficient, and sustainable digital solutions.
         </p>
+
         <div className="button-group">
           <button
             type="button"
-            className="secondary-btn"
+            className="primary-btn"
             onClick={() => showModal && showModal("Projects", <Projects />)}
           >
-            View Projects
+            Explore Projects
           </button>
-          <button
-            type="button"
-            className="secondary-btn"
-            onClick={() =>
-              showModal &&
-              showModal(
-                "Resume",
-                <div>
-                  <p>Download my resume:</p>
-                  <a href="/PRAGATHESWARAN_RESUME.pdf" download className="primary-btn">Download PDF</a>
-                </div>
-              )
-            }
-          >
+
+          <a href="/build/PRAGATHESWARAN_RESUME.pdf" download className="secondary-btn">
             Download Resume
-          </button>
+          </a>
         </div>
       </div>
+
+      {/* WhatsApp-style photo lightbox */}
+      {photoOpen && (
+        <div className="photo-lightbox" onClick={() => setPhotoOpen(false)}>
+          <button
+            className="lightbox-close"
+            onClick={() => setPhotoOpen(false)}
+            aria-label="Close"
+          >
+            ✕
+          </button>
+          <div className="lightbox-img-wrap" onClick={(e) => e.stopPropagation()}>
+            <img src="/ms.jpeg" alt="PRAGATHESWARAN A" className="lightbox-img" />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Home;
+

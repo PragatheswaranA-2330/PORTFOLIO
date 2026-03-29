@@ -5,12 +5,12 @@ export default function Modal({ open, onClose, title, children }) {
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal-card" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
-        <div className="modal-header">
-          <h3>{title}</h3>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
+          <h2 style={{ fontFamily: 'var(--font-heading)', color: 'var(--accent-cyan)', margin: 0 }}>{title}</h2>
           <button className="modal-close" onClick={onClose} aria-label="Close">✕</button>
         </div>
-        <div className="modal-body">{children}</div>
+        <div>{children}</div>
       </div>
     </div>
   );
