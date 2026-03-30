@@ -1,4 +1,5 @@
 import React from "react";
+import { Terminal, Wrench, MessageSquare } from "lucide-react";
 
 const Skills = () => {
   return (
@@ -6,7 +7,7 @@ const Skills = () => {
       <h2 className="section-title">Skills</h2>
       <div className="glass-grid">
         <div className="glass-card">
-          <h3>Web & Programming</h3>
+          <h3 style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}><Terminal size={24} color="var(--accent-cyan)" /> Web & Programming</h3>
           <div className="tags-container">
             <span className="tag">HTML</span>
             <span className="tag">CSS</span>
@@ -19,7 +20,7 @@ const Skills = () => {
           </div>
         </div>
         <div className="glass-card">
-          <h3>Tools & Software</h3>
+          <h3 style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}><Wrench size={24} color="var(--accent-cyan)" /> Tools & Software</h3>
           <div className="tags-container">
             <span className="tag">AutoCAD</span>
             <span className="tag">SolidWorks</span>
@@ -31,7 +32,7 @@ const Skills = () => {
           </div>
         </div>
         <div className="glass-card">
-          <h3>Soft Skills</h3>
+          <h3 style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}><MessageSquare size={24} color="var(--accent-cyan)" /> Soft Skills</h3>
           <div className="tags-container">
             <span className="tag">Time Management</span>
             <span className="tag">Team Collaboration</span>

@@ -1,4 +1,5 @@
 import React from "react";
+import { BookOpen, User } from "lucide-react";
 
 const About = () => {
   return (
@@ -7,7 +8,7 @@ const About = () => {
       
       <div className="glass-grid">
         <div className="glass-card">
-          <h3>My Background</h3>
+          <h3 style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}><User size={24} color="var(--accent-cyan)" /> My Background</h3>
           <p>
             B.E. Mechatronics Engineering student at Kongu Engineering College with
             a strong interest in MERN stack development, 2D/3D modeling, and PCB
@@ -20,7 +21,7 @@ const About = () => {
         </div>
 
         <div className="glass-card">
-          <h3>Education</h3>
+          <h3 style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}><BookOpen size={24} color="var(--accent-cyan)" /> Education</h3>
           <ul style={{ listStyleType: 'none', padding: 0 }}>
             <li style={{ marginBottom: '1rem' }}>
               <strong style={{ color: 'var(--accent-magenta)' }}>B.E. Mechatronics Engineering</strong><br />

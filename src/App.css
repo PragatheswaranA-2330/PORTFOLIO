@@ -42,6 +42,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 4rem;
+  padding: 120px 5% 40px;
   overflow: hidden;
 }
 
@@ -151,10 +153,10 @@ body {
 
 /* Main Hero Content */
 .home-content {
-  text-align: center;
+  text-align: left;
   z-index: 1;
-  padding: 2rem;
-  max-width: 800px;
+  padding: 2rem 0;
+  max-width: 600px;
   animation: fadeUp 1s ease forwards;
 }
 
@@ -408,7 +410,94 @@ body {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+/* Icons & Illustrations Styling */
+.nav-icon {
+  margin-right: 6px;
+  vertical-align: text-bottom;
+}
+
+.social-icon {
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+  padding: 0.6rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon:hover {
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.1);
+  border-color: var(--accent-cyan);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.25);
+}
+
+.hero-illustration-container {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 8s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+.hero-illustration {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 240, 255, 0.15));
+}
+
+.contact-illustration-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.15;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-illustration {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: hue-rotate(20deg) saturate(1.5);
+}
+
 /* Responsive */
+@media (max-width: 968px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+  }
+  .home-content {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .hero-illustration-container {
+    margin-top: 2rem;
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;

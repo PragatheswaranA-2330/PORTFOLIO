@@ -2,6 +2,8 @@
 import React, { useContext, useState } from "react";
 import { ModalContext } from "../App";
 import Projects from "./Projects";
+import { Mail } from "lucide-react";
+import { FiGithub as Github, FiLinkedin as Linkedin } from "react-icons/fi";
 
 function useModal() {
   const ctx = useContext(ModalContext);
@@ -41,6 +43,12 @@ const Home = () => {
           efficient, and sustainable digital solutions.
         </p>
 
+        <div className="social-links" style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon"><Github size={24} /></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={24} /></a>
+          <a href="mailto:email@example.com" className="social-icon"><Mail size={24} /></a>
+        </div>
+
         <div className="button-group">
           <button
             type="button"
@@ -54,6 +62,10 @@ const Home = () => {
             Download Resume
           </a>
         </div>
+      </div>
+
+      <div className="hero-illustration-container">
+        <img src="/hero_illustration.png" alt="Tech Illustration" className="hero-illustration" />
       </div>
 
       {/* WhatsApp-style photo lightbox */}
