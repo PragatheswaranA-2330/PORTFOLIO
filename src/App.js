@@ -8,7 +8,7 @@ import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Modal from "./components/Modal";
 
-export const ModalContext = createContext({ showModal: () => {} });
+export const ModalContext = createContext({ showModal: () => { } });
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);

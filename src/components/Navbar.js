@@ -15,7 +15,7 @@ const Navbar = () => {
         <li><a href="#certifications"><Award size={18} className="nav-icon"/> Certifications</a></li>
         <li><a href="#contact"><Mail size={18} className="nav-icon"/> Contact</a></li>
         <li>
-          <a href="/build/PRAGATHESWARAN_RESUME.pdf" download className="primary-btn" style={{padding: '0.4rem 1.2rem', display: 'flex', alignItems: 'center', gap: '0.4rem'}}>
+          <a href="Pragatheswaran_FS Developer.pdf" download className="primary-btn" style={{padding: '0.4rem 1.2rem', display: 'flex', alignItems: 'center', gap: '0.4rem'}}>
             <FileText size={18} /> Resume
           </a>
         </li>

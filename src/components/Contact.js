@@ -40,10 +40,10 @@ const Contact = () => {
             </div>
 
             <div className="button-group" style={{ marginTop: '1rem', justifyContent: 'center' }}>
-              <a href="https://www.linkedin.com/in/Pragatheswaran-A" target="_blank" rel="noreferrer" className="primary-btn" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+              <a href="https://www.linkedin.com/in/pragatheswarana2330/" target="_blank" rel="noreferrer" className="primary-btn" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
                 <Linkedin size={18} /> LinkedIn
               </a>
-              <a href="https://github.com/PragatheswaranA_23-30" target="_blank" rel="noreferrer" className="secondary-btn" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+              <a href="https://github.com/PragatheswaranA-2330" target="_blank" rel="noreferrer" className="secondary-btn" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
                 <Github size={18} /> GitHub
               </a>
             </div>

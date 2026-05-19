@@ -5,10 +5,18 @@ const Certifications = () => {
     <div className="section-container" id="certifications">
       <h2 className="section-title">Certifications</h2>
       <div className="glass-grid">
+
         <div className="glass-card">
           <h3>Autodesk Certified User</h3>
           <p>AutoCAD (May 2025)</p>
           <span className="tag">Design</span>
+        </div>
+
+        <div className="glass-card">
+           <h3>Full stack Certified(Edu Prep)</h3>
+          <p>Full Stack (Nov 2025)</p>
+          <span className="tag">Web Design</span>
+
         </div>
         
         <div className="glass-card">
