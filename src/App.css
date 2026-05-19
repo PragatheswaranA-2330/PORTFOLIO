@@ -49,7 +49,10 @@ body {
 
 .home-bg {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: -1;
   background: var(--bg-dark);
   overflow: hidden;
@@ -64,38 +67,56 @@ body {
 }
 
 .orb-1 {
-  width: 400px; height: 400px;
+  width: 400px;
+  height: 400px;
   background: var(--accent-magenta);
-  top: -100px; left: -100px;
+  top: -100px;
+  left: -100px;
   animation-delay: 0s;
 }
 
 .orb-2 {
-  width: 500px; height: 500px;
+  width: 500px;
+  height: 500px;
   background: var(--accent-cyan);
-  bottom: -200px; right: -100px;
+  bottom: -200px;
+  right: -100px;
   animation-delay: -5s;
 }
 
 .orb-3 {
-  width: 300px; height: 300px;
+  width: 300px;
+  height: 300px;
   background: var(--accent-violet);
-  top: 40%; left: 30%;
+  top: 40%;
+  left: 30%;
   animation-delay: -10s;
   opacity: 0.4;
 }
 
 @keyframes float {
-  0% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -50px) scale(1.1); }
-  66% { transform: translate(-20px, 20px) scale(0.9); }
-  100% { transform: translate(0, 0) scale(1); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
 }
 
 /* Glassmorphism Navbar */
 .navbar {
   position: fixed;
-  top: 0; width: 100%;
+  top: 0;
+  width: 100%;
   padding: 1.5rem 3rem;
   display: flex;
   justify-content: space-between;
@@ -117,6 +138,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -137,8 +159,10 @@ body {
 .nav-links li a::after {
   content: '';
   position: absolute;
-  width: 0; height: 2px;
-  bottom: -4px; left: 0;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
   background: var(--accent-cyan);
   transition: width 0.3s ease;
 }
@@ -167,18 +191,24 @@ body {
 }
 
 .hero-photo {
-  width: 180px; height: 180px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid transparent;
   background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
-              linear-gradient(45deg, var(--accent-magenta), var(--accent-cyan)) border-box;
+    linear-gradient(45deg, var(--accent-magenta), var(--accent-cyan)) border-box;
   animation: pulseAvatar 3s infinite alternate;
 }
 
 @keyframes pulseAvatar {
-  0% { box-shadow: 0 0 15px rgba(255, 46, 147, 0.4), 0 0 30px rgba(0, 240, 255, 0.2); }
-  100% { box-shadow: 0 0 30px rgba(255, 46, 147, 0.6), 0 0 50px rgba(0, 240, 255, 0.4); }
+  0% {
+    box-shadow: 0 0 15px rgba(255, 46, 147, 0.4), 0 0 30px rgba(0, 240, 255, 0.2);
+  }
+
+  100% {
+    box-shadow: 0 0 30px rgba(255, 46, 147, 0.6), 0 0 50px rgba(0, 240, 255, 0.4);
+  }
 }
 
 .hero-subtitle {
@@ -193,10 +223,11 @@ body {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(1.8rem, 3vw, 3rem);
   line-height: 1.1;
   margin-bottom: 1.5rem;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .hero-desc {
@@ -274,8 +305,10 @@ body {
 .section-title::after {
   content: '';
   position: absolute;
-  width: 50%; height: 4px;
-  bottom: -10px; left: 0;
+  width: 50%;
+  height: 4px;
+  bottom: -10px;
+  left: 0;
   background: linear-gradient(90deg, var(--accent-cyan), transparent);
   border-radius: 2px;
 }
@@ -301,9 +334,11 @@ body {
 .glass-card::before {
   content: '';
   position: absolute;
-  top: 0; left: -100%;
-  width: 50%; height: 100%;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
   transform: skewX(-20deg);
   transition: left 0.7s ease;
 }
@@ -357,7 +392,10 @@ body {
 /* Modal Styling */
 .modal-backdrop {
   position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
   display: flex;
@@ -381,7 +419,8 @@ body {
 
 .modal-close {
   position: absolute;
-  top: 1.5rem; right: 1.5rem;
+  top: 1.5rem;
+  right: 1.5rem;
   background: transparent;
   border: none;
   color: var(--text-muted);
@@ -396,18 +435,37 @@ body {
 
 /* Animations */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(50px) scale(0.95); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Icons & Illustrations Styling */
@@ -483,15 +541,18 @@ body {
     text-align: center;
     padding-top: 8rem;
   }
+
   .home-content {
     text-align: center;
     align-items: center;
     display: flex;
     flex-direction: column;
   }
+
   .social-links {
     justify-content: center;
   }
+
   .hero-illustration-container {
     margin-top: 2rem;
     max-width: 400px;
@@ -502,12 +563,16 @@ body {
   .hero-title {
     font-size: 2.5rem;
   }
+
   .navbar {
     padding: 1rem 1.5rem;
   }
+
   .nav-links {
-    display: none; /* In a real app, maybe add a hamburger menu */
+    display: none;
+    /* In a real app, maybe add a hamburger menu */
   }
+
   .button-group {
     flex-direction: column;
   }
@@ -572,6 +637,13 @@ body {
 }
 
 @keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.85); }
-  to   { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
